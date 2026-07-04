@@ -1,0 +1,41 @@
+graph TD
+    User([User]) -->|Inputs Natural Plan| UI[Streamlit UI / ADK Playground]
+    
+    UI -->|Forwards Plan| SPA[Safety Policy Agent]
+    
+    subgraph Security Checkpoint Node
+        SPA -->|1. PII Scrubbing| PII[Email/Phone/SSN Redactor]
+        PII -->|2. Prompt Injection Check| INJ[Keyword & Command Scanner]
+        INJ -->|3. Unsafe Road Guidance Check| SAF[Flooding/Barricade Rules Check]
+        SAF -->|4. Audit Log Generation| AUD[JSON Audit Trail to Stdout]
+    end
+    
+    AUD -->|If Violations Blocked| FF[Final Output Formatter]
+    AUD -->|If Clean| CMD[Commander Agent]
+    
+    subgraph Multi-Agent Delegation
+        CMD -->|Delegates Destination Plan| DRA[Destination Readiness Agent]
+        CMD -->|Delegates Dining Plan| FPA[Food & Place Agent]
+    end
+    
+    subgraph MCP Server Stdio Tools
+        DRA -->|Queries Context| MCP[ATLAS MCP Server]
+        FPA -->|Queries Context| MCP
+        
+        MCP -->|Tool| T1[atlas_weather_context]
+        MCP -->|Tool| T2[atlas_aqi_context]
+        MCP -->|Tool| T3[atlas_civic_signal]
+        MCP -->|Tool| T4[atlas_places_search]
+        MCP -->|Tool| T5[atlas_safety_rules]
+    end
+    
+    T1 -.->|Telemetry| CMD
+    T2 -.->|Telemetry| CMD
+    T3 -.->|Telemetry| CMD
+    T4 -.->|Telemetry| CMD
+    T5 -.->|Telemetry| CMD
+    
+    CMD -->|Assembles Report| DSA[Decision Scoring Agent]
+    DSA -->|Calculates Weighted Score & Reason| FF
+    
+    FF -->|Outputs JSON| Out[ATLAS Decision Score & Trace]

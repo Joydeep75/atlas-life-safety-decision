@@ -1,0 +1,46 @@
+graph TD
+    subgraph Repository File Structure
+        Root[atlas-life-safety-decision/]
+        
+        Root --> AppDir[app/]
+        Root --> TestDir[tests/]
+        Root --> AssetsDir[assets/]
+        Root --> DocFiles[Documentation & Run Files]
+        
+        subgraph App Source Code
+            AppDir --> AgentFile[agent.py]
+            AppDir --> ConfigFile[config.py]
+            AppDir --> MCPFile[mcp_server.py]
+            AppDir --> FastApiFile[fast_api_app.py]
+            
+            AgentFile -->|Imports Configuration| ConfigFile
+            AgentFile -->|Wires Context Tools| MCPFile
+            FastApiFile -->|Mounts App Agent| AgentFile
+        end
+        
+        subgraph Code Modules & Abstractions
+            AgentFile -->|Defines Schema Models| Models[ATLASDecisionOutput<br>ScoreBreakdown]
+            AgentFile -->|Registers Entry Node| SecCheck[security_checkpoint]
+            AgentFile -->|Registers Final Node| Scoring[decision_scoring]
+        end
+        
+        subgraph Test Suite
+            TestDir --> UnitTest[unit/test_atlas.py]
+            TestDir --> IntegrationTest[integration/test_agent.py]
+            TestDir --> E2ETest[integration/test_server_e2e.py]
+            
+            UnitTest -->|Validates Logic| AgentFile
+            IntegrationTest -->|Validates Graph Routes| AgentFile
+            E2ETest -->|Validates APIs| FastApiFile
+        end
+        
+        subgraph Documentation & Visuals
+            DocFiles --> README[README.md]
+            DocFiles --> Writeup[SUBMISSION_WRITEUP.md]
+            DocFiles --> Make[Makefile]
+            DocFiles --> Streamlit[streamlit_app.py]
+            
+            Streamlit -->|Runs Graph Offline| AgentFile
+            README -->|Describes Config & Usage| ConfigFile
+        end
+    end
