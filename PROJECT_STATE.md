@@ -9,7 +9,7 @@
 * **Streamlit Mission Control UI:** Built [streamlit_app.py](file:///Users/joydeepg/Education/Kaggle-Google/15-19-June-2026/Capstone_Project/adk-workspace/atlas-life-safety-decision/streamlit_app.py) with quick interactive demos, history, favorites, and detailed trace logging.
 * **Phase 6 (README & Write-Up):** Created [README.md](file:///Users/joydeepg/Education/Kaggle-Google/15-19-June-2026/Capstone_Project/adk-workspace/atlas-life-safety-decision/README.md) and [SUBMISSION_WRITEUP.md](file:///Users/joydeepg/Education/Kaggle-Google/15-19-June-2026/Capstone_Project/adk-workspace/atlas-life-safety-decision/SUBMISSION_WRITEUP.md) containing project architecture, scoring tables, and privacy statements.
 * **Phase 7 (Submission Assets):** Generated professional, dark-themed AI agent workflow diagram (`architecture_high_level.png`), low-level codebase architecture diagram (`architecture_low_level.png`), and project cover page banner (`cover_page_banner.png`) inside the `assets/` directory. Preserved original `.mmd` files and legacy `architecture_diagram.png` per instruction. Linked these assets in `README.md`.
-* **Phase 8 (Narration Script):** Created spoken narration script (`DEMO_SCRIPT.txt`) matching slide visuals, walkthrough details, and design explanations.
+* **Phase 8 (Narration Script & Video Package):** Created spoken narration script (`DEMO_SCRIPT.txt`), video storyboard (`docs/video_storyboard.md`), shot list (`docs/video_shot_list.md`), voiceover script (`docs/video_voiceover.md`), and presenter recording checklist (`docs/demo_checklist.md`).
 
 ## 2. Current Working Commands
 * **Run Streamlit UI:** `make ui` (starts Streamlit on http://localhost:8501)

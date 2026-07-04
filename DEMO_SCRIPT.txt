@@ -1,0 +1,52 @@
+ATLAS Spoken Video Script (Target: 5 Minutes)
+==============================================
+
+[0:00 - 0:20] Hook
+-----------------
+*Screen Action:* Show cover_page_banner_tech.png in full screen.
+*Voiceover:* "Every day, millions of people make plans that impact their health and safety—whether it's traveling to a new city or grabbing dinner. But traditional tools require you to manually check municipal alerts. ATLAS changes that. It's a proactive Life-Safety Decision Agent that scans, checks, and scores your everyday plans automatically."
+
+[0:20 - 0:45] Problem
+--------------------
+*Screen Action:* Open README.md and scroll to Section 1: Problem Statement.
+*Voiceover:* "If there is an active gale warning at a coastal destination or health violations at a local diner, you are only safe if you think to search for them. If you don't ask, you don't know. ATLAS removes this cognitive burden by shifting safety from reactive search to proactive, agentic inference."
+
+[0:45 - 1:10] ATLAS Solution
+---------------------------
+*Screen Action:* Open Streamlit UI (http://localhost:8501) showing "Assess the readiness and safety of your everyday plans instantly."
+*Voiceover:* "You describe your plan in natural language. ATLAS infers your implicit safety needs, activates specialized sub-agents, queries local context safety tools via Model Context Protocol, and returns an explainable score. Let's see how the architecture makes this possible."
+
+[1:10 - 1:45] Architecture
+-------------------------
+*Screen Action:* Open README.md and show high-level and low-level architecture diagrams. Then briefly open agent.py (lines 150-180) to show Safety Policy Agent code.
+*Voiceover:* "ATLAS is a multi-agent system built on the Google Antigravity and ADK 2.0 graph workflow. A Safety Policy Agent inspects all inputs. If clean, the Commander Agent delegates tasks to the Destination Readiness or Food and Place Agents. They pull safety parameters from our stdio MCP server. Finally, a Decision Scoring Agent consolidates the telemetry into a weighted risk score."
+
+[1:45 - 2:30] Demo 1: Destination Readiness
+------------------------------------------
+*Screen Action:* Click the "Destination readiness Demo" button in the Streamlit UI. Submit. Show metrics loading and displaying: Score: 75/100, Label: Good Idea, Confidence: Medium-Low. Expand "Category Score Breakdown" to show Weather: 20/25, AQI: 20/20, Civic: 15/20.
+*Voiceover:* "Let's run a destination plan. We click our demo button: 'I am planning to visit a coastal city this weekend with my family.' ATLAS triggers the weather, air quality, and safety rule tools. The score evaluates to 75, indicating a Good Idea, but warns of moderate wind alerts in the breakdown reason."
+
+[2:30 - 3:15] Demo 2: Food & Place
+----------------------------------
+*Screen Action:* Click the "Food & Place Recommendation Demo" button in the Streamlit UI. Submit. Show results: Eatery suggestions like "Sample Eatery Center" (Open, Rating 4.5/5), safety reason, and a comfort score breakdown.
+*Voiceover:* "Now, let's look at dining safety. We click our food demo button. ATLAS queries the places search MCP tool, checking local department registries. It suggests certified dining options like Sample Eatery Center and scores the plan's safety comfort at 92 out of 100, representing an Excellent Idea."
+
+[3:15 - 3:50] Demo 3: Security Block
+------------------------------------
+*Screen Action:* Click the "Security Block Demo" button in the Streamlit UI. Submit. Result shows Score: 0/100, Label: Blocked for unsafe request. Open terminal showing stdout JSON audit log format: {"mission_type": "safety_block", "safety_status": "BLOCKED", "severity": "CRITICAL"}.
+*Voiceover:* "Security is non-negotiable. If a user tries to override instructions, for example, asking how to drive through flooded roads and bypass barricades, the Safety Policy Agent blocks it instantly. Downstream routing is cut off. A score of 0 is returned, and a structured security audit event is logged to stdout with critical severity."
+
+[3:50 - 4:25] Course Concepts
+-----------------------------
+*Screen Action:* Open mcp_server.py (first 50 lines) showing FastMCP server initialization and tool definitions. Show tests/unit/test_atlas.py to show pytest rig.
+*Voiceover:* "ATLAS showcases key concepts of modern agentic development. The ADK 2.0 graph workflow handles routing without cycles. Stdio Model Context Protocol tools isolate safety context. Gateway security layers redaction and prompt injections. And a full unit test suite ensures the entire setup is robust and deterministic."
+
+[4:25 - 4:45] Deployability & Reproducibility
+--------------------------------------------
+*Screen Action:* Open README.md and show Section 13: Local Setup and Section 14: Running ATLAS. Show Github Push Instructions.
+*Voiceover:* "ATLAS is highly reproducible. Using our provided Makefile and local mock-telemetry fallbacks, judges can run the entire test suite, playground, or Streamlit UI locally in seconds. A clean Dockerfile is also included for zero-friction Cloud Run deployments."
+
+[4:45 - 5:00] Future Scope & Close
+----------------------------------
+*Screen Action:* Show cover_page_banner_tech.png in full screen.
+*Voiceover:* "In the future, we will connect ATLAS to live NOAA and municipal health APIs and deploy lightweight local models to enhance data privacy. ATLAS is a showcase of how intelligent, secured agents can work for social good. Thank you."
