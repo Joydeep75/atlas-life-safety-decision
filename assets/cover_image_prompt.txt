@@ -1,0 +1,4 @@
+A highly professional, dark-themed project cover image banner for 'ATLAS: Life-Safety Decision Agent'. 
+On the left side: clean, modern sans-serif typography showing the title 'ATLAS' in bright white, and the subtitle 'Life-Safety Decision Agent' in a soft cyan. Below the title, four clean bulleted labels with technical icons: 'Multi-Agent Decisions', 'MCP Tools', 'Safety Guardrails', and 'Explainable Decision Score'.
+On the right side: an abstract, glowing 3D vector shield structure surrounded by concentric rings of security telemetry.
+Style: Modern AI mission-control dashboard. Calm, clean, professional look. Color palette of deep navy blue, glowing teal/green, and clean white. Esthetically high-end, 16:9 aspect ratio, cinematic lighting, corporate tech design.
