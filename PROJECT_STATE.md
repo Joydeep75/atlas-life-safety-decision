@@ -1,0 +1,43 @@
+# ATLAS: Life-Safety Decision Agent — Project State & Polish Checkpoint
+
+## 1. Completed So Far
+* **Phase 1 (Scaffold, Auth & Environment):** Scaffolded project using `agents-cli`, set up local `.env` (Gemini API key), configured `.gitignore`.
+* **Phase 2 (Multi-Agent Architecture):** Implemented a 5-agent design (Commander, Destination Readiness, Food & Place, Decision Scoring, Safety Policy) via the ADK 2.0 Workflows graph API (no duplicate edges, dictionary-based routing).
+* **Phase 3 (MCP Server):** Built FastMCP server exposing 5 tools (`atlas_weather_context`, `atlas_aqi_context`, `atlas_civic_signal`, `atlas_places_search`, `atlas_safety_rules`) with mock safety rules data.
+* **Phase 4 (Security):** Implemented gateway regex-based PII scrubber, prompt injection blocker, unsafe plan filter, and JSON audit logging.
+* **Phase 5 (Local Dev & Testing):** Written and passed 9 unit tests checking validation, redaction, and intent routing. Checked compatibility.
+* **Streamlit Mission Control UI:** Built [streamlit_app.py](file:///Users/joydeepg/Education/Kaggle-Google/15-19-June-2026/Capstone_Project/adk-workspace/atlas-life-safety-decision/streamlit_app.py) with quick interactive demos, history, favorites, and detailed trace logging.
+* **Phase 6 (README & Write-Up):** Created [README.md](file:///Users/joydeepg/Education/Kaggle-Google/15-19-June-2026/Capstone_Project/adk-workspace/atlas-life-safety-decision/README.md) and [SUBMISSION_WRITEUP.md](file:///Users/joydeepg/Education/Kaggle-Google/15-19-June-2026/Capstone_Project/adk-workspace/atlas-life-safety-decision/SUBMISSION_WRITEUP.md) containing project architecture, scoring tables, and privacy statements.
+
+## 2. Current Working Commands
+* **Run Streamlit UI:** `make ui` (starts Streamlit on http://localhost:8501)
+* **Run ADK Playground:** `make playground` (starts playground on http://localhost:18081)
+* **Run Unit Tests:** `make test` (runs unit tests via pytest)
+* **Verify Dependencies:** `make install` (runs uv sync)
+
+## 3. Current Known Issues
+* **None:** Unit tests pass (9/9), and Streamlit UI runs successfully without any model type or session lookup errors.
+
+## 4. Remaining Polish Tasks
+* **Phase 7 (Submission Assets):** Generate visual workflow diagram (`architecture_diagram.png`) and cover banner (`cover_page_banner.png`).
+* **Phase 8 (Narration Script):** Generate spoken demo script (`DEMO_SCRIPT.txt`).
+
+## 5. Files Protected (Do not change unless required)
+* `app/agent.py` — Core graph logic and routing.
+* `app/mcp_server.py` — Stdio MCP tools definition.
+* `tests/unit/test_atlas.py` — Deterministic test suite.
+* `streamlit_app.py` — Mission Control UI layout.
+
+## 6. Non-Negotiable ATLAS Requirements
+* **Track:** Agents for Good (Health, Safety, and Civic Readiness).
+* **ADK multi-agent workflow** must remain.
+* **MCP server code** must remain.
+* **Security checkpoint** must remain.
+* **Neutral demo locations only:** `Coastal City`, `Sample City Center`, `Sample Downtown`, `Sample Destination`.
+* **No hardcoded real cities** in code, tests, or documentation.
+* **ATLAS Decision Score** must include a one-line `decision_reason`.
+* **Score Breakdown components** must include one-line `reason` entries.
+* **History/Favorites** must be session-only (Streamlit `st.session_state` only).
+* **No database, login, cookies, browser storage, cloud storage, or persistent profiles.**
+* **No API keys or secrets** committed to git.
+* **Live deployment is optional; GitHub reproducibility is mandatory.**
