@@ -224,3 +224,20 @@ make test
 1. **Live API Integration:** Connecting MCP tools to live municipal APIs (e.g. NOAA, EPA, local Health Department registries).
 2. **Offline Local LLMs:** Integrating lightweight local model runners (e.g. Gemma 2b) to enhance privacy.
 3. **Cross-device Persistence:** Encrypted databases to enable secure cross-device histories with user consent.
+
+---
+
+## Screenshots
+
+### 1. Mission Control Dashboard Home
+![ATLAS Home Screen](assets/screenshots/home.png)
+
+### 2. Destination Readiness Assessment Result
+![Destination Readiness Result](assets/screenshots/destination_result.png)
+
+### 3. Food & Place Recommendation Result
+![Food & Place Result](assets/screenshots/food_result.png)
+
+### 4. Gateway Security Block Alert
+![Security Block Alert](assets/screenshots/security_block.png)
+
