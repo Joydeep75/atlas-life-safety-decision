@@ -234,14 +234,14 @@ make test
 ## Screenshots
 
 ### 1. Mission Control Dashboard Home
-![ATLAS Home Screen](assets/screenshots/atlas_home_1.png)
+![ATLAS Home Screen](./assets/screenshots/atlas_home_1.png)
 
 ### 2. Destination Readiness Assessment Result
-![Destination Readiness Result](assets/screenshots/destination_readiness_result_1.png)
+![Destination Readiness Result](./assets/screenshots/destination_readiness_result_1.png)
 
 ### 3. Food & Place Recommendation Result
-![Food & Place Result](assets/screenshots/food_place_result_1.png)
+![Food & Place Result](./assets/screenshots/food_place_result_1.png)
 
 ### 4. Gateway Security Block Alert
-![Security Block Alert](assets/screenshots/security_block_alert_1.png)
+![Security Block Alert](./assets/screenshots/security_block_alert_1.png)
 
