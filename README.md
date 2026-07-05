@@ -224,6 +224,10 @@ make test
 1. **Live API Integration:** Connecting MCP tools to live municipal APIs (e.g. NOAA, EPA, local Health Department registries).
 2. **Offline Local LLMs:** Integrating lightweight local model runners (e.g. Gemma 2b) to enhance privacy.
 3. **Cross-device Persistence:** Encrypted databases to enable secure cross-device histories with user consent.
+4. **Expanded Decision Frameworks:** Extend the agent's domain scope to cover broader life-safety categories (e.g., active structural fire risks, extreme thermal alerts, and municipal chemical hazards) by adding specialized sub-agents integrated with live municipal API registries. This will support day-to-day consumer tasks such as:
+   - **Personalized Commute Planning:** Automatically analyzing daily travel routes (e.g., home-to-office, local grocery stores, school drop-offs) for localized road hazards, toxic spill alerts, or transit delays. Safety scores will adapt dynamically to the user's travel patterns based on their saved searches and explicitly granted consent.
+   - **Event & Activity Validation:** Scanning local safety mandates and environmental hazards for outdoor runs, sports events, or community festivals.
+5. **Cross-Platform Client Ecosystem:** Expand the B2C delivery model by engineering dedicated mobile (iOS/Android), iPad, and smart wearable applications to bring real-time, context-aware safety assessments directly to users on the move.
 
 ---
 
