@@ -218,9 +218,9 @@ with col_left:
 
     with demo_c2:
         if st.button("🍕 Food & Place", use_container_width=True):
-            st.session_state.current_plan = "I want Mediterranean food near the city center tonight."
+            st.session_state.current_plan = "I want Mediterranean food near the city center today."
             st.session_state.current_loc = "Sample City Center"
-            st.session_state.current_ctx = "traveling with an elderly family member"
+            st.session_state.current_ctx = "traveling with adult family members"
             st.rerun()
 
     with demo_c3:
