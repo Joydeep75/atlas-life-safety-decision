@@ -13,6 +13,125 @@ st.set_page_config(
     layout="wide"
 )
 
+# Custom CSS styling for B2C premium trust, semantic colors, and high contrast
+st.markdown(
+    """
+    <style>
+    /* 60% Dominant Canvas (Slate 100 background tint) */
+    .stApp {
+        background-color: #F8FAFC !important;
+        color: #0F172A !important;
+    }
+    
+    /* 30% Secondary (Trust: Deep Navy Sidebar and text) */
+    [data-testid="stSidebar"] {
+        background-color: #0F172A !important;
+        color: #F8FAFC !important;
+    }
+    [data-testid="stSidebar"] * {
+        color: #F8FAFC !important;
+    }
+    
+    /* Main body headings and text in Deep Navy */
+    h1, h2, h3, h4, h5, h6, p, label {
+        color: #0F172A !important;
+    }
+    
+    /* Input fields styling */
+    textarea, input, select {
+        color: #0F172A !important;
+        background-color: #FFFFFF !important;
+        border: 1px solid #CBD5E1 !important;
+        border-radius: 6px !important;
+    }
+
+    /* 10% Accent Button (Vivid Cobalt Blue for Main Action Button) */
+    div.stButton > button:first-child {
+        background-color: #2563EB !important;
+        color: #FFFFFF !important;
+        border: none !important;
+        border-radius: 6px !important;
+        font-weight: bold !important;
+        padding: 0.6rem 2rem !important;
+        transition: background-color 0.2s ease;
+    }
+    div.stButton > button:first-child:hover {
+        background-color: #1D4ED8 !important;
+    }
+
+    /* Ghost Buttons for Neutral / Secondary Actions */
+    [data-testid="stSidebar"] button, .ghost-button button {
+        background-color: transparent !important;
+        color: #94A3B8 !important;
+        border: 1px solid #334155 !important;
+        border-radius: 6px !important;
+        transition: all 0.2s ease;
+    }
+    [data-testid="stSidebar"] button:hover, .ghost-button button:hover {
+        color: #FFFFFF !important;
+        border-color: #64748B !important;
+        background-color: #1E293B !important;
+    }
+
+    /* Semantic Scoring System (Cards with WCAG compliant colors) */
+    .card-excellent {
+        background-color: #DCFCE7 !important;
+        color: #15803D !important;
+        border: 1px solid #86EFAC !important;
+        border-radius: 8px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .card-excellent h4 {
+        color: #166534 !important;
+        margin-bottom: 5px;
+    }
+    .card-excellent h3 {
+        color: #15803D !important;
+        margin-top: 0;
+    }
+
+    .card-caution {
+        background-color: #FEF3C7 !important;
+        color: #B45309 !important;
+        border: 1px solid #FDE047 !important;
+        border-radius: 8px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .card-caution h4 {
+        color: #92400E !important;
+        margin-bottom: 5px;
+    }
+    .card-caution h3 {
+        color: #B45309 !important;
+        margin-top: 0;
+    }
+
+    .card-blocked {
+        background-color: #FEE2E2 !important;
+        color: #B91C1C !important;
+        border: 1px solid #FCA5A5 !important;
+        border-radius: 8px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .card-blocked h4 {
+        color: #991B1B !important;
+        margin-bottom: 5px;
+    }
+    .card-blocked h3 {
+        color: #B91C1C !important;
+        margin-top: 0;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # Async helper to run the ADK Multi-Agent Workflow
 async def run_agent_workflow(plan_text: str) -> ATLASDecisionOutput:
     runner = InMemoryRunner(app=adk_app)
@@ -52,8 +171,7 @@ if "favorites" not in st.session_state:
 
 # Sidebar Layout
 with st.sidebar:
-    st.title("🛡️ ATLAS Mission Control")
-    st.subheader("MVP Overview")
+    st.title("🛡️ ATLAS Control")
     st.write(
         "ATLAS infers decision intent from natural language plans, "
         "coordinates specialized sub-agents, queries MCP safety tools, "
@@ -81,6 +199,12 @@ with st.sidebar:
                 st.session_state.current_ctx = item['context']
                 st.session_state.last_result = item['output']
                 st.rerun()
+                
+        if st.button("🧹 Clear History", use_container_width=True):
+            st.session_state.history = []
+            if "last_result" in st.session_state:
+                del st.session_state.last_result
+            st.rerun()
 
 # Main Header
 st.title("🛡️ ATLAS")
@@ -140,6 +264,7 @@ with st.form("evaluation_form"):
         options=["Auto-detect", "Destination Readiness", "Food & Place"]
     )
     
+    # Accent color applied via CSS styles
     submit_button = st.form_submit_button("Shield Scan Plan", use_container_width=True)
 
 if submit_button and plan_input:
@@ -167,42 +292,73 @@ if submit_button and plan_input:
         except Exception as e:
             st.error(f"Error executing agent workflow: {e}")
 
-# Results Panel
-if "last_result" in st.session_state:
+# Empty State / Results Panel
+if "last_result" not in st.session_state:
+    st.markdown("---")
+    st.info(
+        "🛡️ **Welcome to ATLAS Mission Control**\n\n"
+        "Enter your plan details above and press **Shield Scan Plan** to start a new safety assessment, "
+        "or select one of the **Interactive Demos** above."
+    )
+else:
     res: ATLASDecisionOutput = st.session_state.last_result
     
     st.markdown("---")
     st.markdown("## 🛡️ Scan Results")
     
-    # Hero Score display
+    # Hero Score display with B2C traffic light system
     score_col, label_col, conf_col = st.columns(3)
-    with score_col:
-        st.metric(label="ATLAS Decision Score", value=f"{res.decision_score} / 100")
-    with label_col:
-        st.metric(label="Decision Label", value=res.decision_label)
-    with conf_col:
-        st.metric(label="Evaluation Confidence", value=res.confidence)
-        
-    st.info(f"**Decision Reason:** {res.decision_reason}")
     
-    # Recommendations
+    # Map score category dynamically using semantic scoring system
+    lbl = res.decision_label.lower()
+    if "excellent" in lbl or "good" in lbl:
+        card_class = "card-excellent"
+        badge_html = f"🟢 {res.decision_label}"
+    elif "caution" in lbl or "risky" in lbl:
+        card_class = "card-caution"
+        badge_html = f"🟡 {res.decision_label}"
+    else:  # Not Recommended or Blocked
+        card_class = "card-blocked"
+        badge_html = f"🔴 {res.decision_label}"
+        
+    with score_col:
+        st.markdown(
+            f'<div class="{card_class}"><h4>ATLAS Decision Score</h4><h3>{res.decision_score} / 100</h3></div>',
+            unsafe_allow_html=True
+        )
+    with label_col:
+        st.markdown(
+            f'<div class="{card_class}"><h4>Decision Verdict</h4><h3>{badge_html}</h3></div>',
+            unsafe_allow_html=True
+        )
+    with conf_col:
+        st.markdown(
+            f'<div class="{card_class}"><h4>Evaluation Confidence</h4><h3>{res.confidence}</h3></div>',
+            unsafe_allow_html=True
+        )
+        
+    st.markdown(f"**Overall Decision Reason:** *{res.decision_reason}*")
+    
+    # Recommendations container
     if res.recommendations:
-        st.subheader("📋 Recommendations")
-        for rec in res.recommendations:
-            st.markdown(f"- {rec}")
+        with st.container():
+            st.subheader("📋 Recommendations")
+            for rec in res.recommendations:
+                st.markdown(f"- {rec}")
             
-    # Breakdown
+    # Score Breakdown container
     if res.score_breakdown:
-        st.subheader("📊 Category Score Breakdown")
-        breakdown_cols = st.columns(len(res.score_breakdown))
-        for idx, item in enumerate(res.score_breakdown):
-            with breakdown_cols[idx]:
-                st.metric(
-                    label=item.category,
-                    value=f"{item.score} / {item.max_score}",
-                    help=item.reason
-                )
-                st.caption(item.reason)
+        with st.container():
+            st.subheader("📊 Category Score Breakdown")
+            breakdown_cols = st.columns(len(res.score_breakdown))
+            for idx, item in enumerate(res.score_breakdown):
+                with breakdown_cols[idx]:
+                    st.metric(
+                        label=item.category,
+                        value=f"{item.score} / {item.max_score}",
+                        help=item.reason
+                    )
+                    st.caption(item.reason)
                 
     st.markdown("---")
     
@@ -227,9 +383,9 @@ if "last_result" in st.session_state:
         else:
             st.caption("No tools called (e.g. security bypass/blocked).")
 
-    # Add to favorites
-    fav_col, clear_col = st.columns([8, 2])
-    with fav_col:
+    # Save to favorites & list
+    f_col1, f_col2 = st.columns([8, 2])
+    with f_col1:
         if st.button("❤️ Save to Favorites"):
             st.session_state.favorites.append({
                 "plan": plan_input,
@@ -237,10 +393,14 @@ if "last_result" in st.session_state:
                 "label": res.decision_label
             })
             st.success("Saved to favorites list!")
-            
+
 # Favorites Display
 if st.session_state.favorites:
     st.markdown("---")
     st.subheader("❤️ Saved Favorites")
     for fav in st.session_state.favorites:
         st.markdown(f"- **Plan:** {fav['plan']} | **Score:** `{fav['score']}` | **Label:** {fav['label']}")
+        
+    if st.button("🗑️ Clear Favorites"):
+        st.session_state.favorites = []
+        st.rerun()
