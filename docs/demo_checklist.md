@@ -14,7 +14,7 @@ Use this checklist during recording to ensure all required assets, files, and ac
 ---
 
 ## 2. Shot List Checklist
-- [ ] **Banner:** Show `cover_page_banner_tech.png` for intro.
+- [ ] **Banner:** Show `cover_page_banner_professional.png` for intro.
 - [ ] **Problem:** Scroll through Section 1: Problem Statement in `README.md`.
 - [ ] **Architecture:** Scroll through rendered High-Level and Low-Level diagrams in `README.md`.
 - [ ] **Agent Logic:** Open `app/agent.py` and show `safety_policy_agent` function.

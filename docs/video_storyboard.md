@@ -5,7 +5,7 @@ This document storyboard outlines the visual transitions and slide sequences for
 ---
 
 ## Scene 1: Introduction (0:00–0:45)
-* **Visual:** Premium technical cover page banner (`cover_page_banner_tech.png`).
+* **Visual:** Premium technical cover page banner (`cover_page_banner_professional.png`).
 * **Transition:** Cut to IDE showing `README.md` (specifically Section 1: Problem Statement).
 * **Key Voiceover Focus:** The hook. Explain the difference between reactive search and proactive life-safety scanning.
 
@@ -43,6 +43,6 @@ This document storyboard outlines the visual transitions and slide sequences for
 ---
 
 ## Scene 6: Future Scope & Wrap-up (4:45–5:00)
-* **Visual:** Premium cover page banner (`cover_page_banner_tech.png`).
+* **Visual:** Premium cover page banner (`cover_page_banner_professional.png`).
 * **Transition:** Slow fade to black.
 * **Key Voiceover Focus:** Value statement, privacy principles, and project closing.

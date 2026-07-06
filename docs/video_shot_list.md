@@ -5,7 +5,7 @@ This document lists the exact sequence of screen actions and code files to recor
 ---
 
 ## Shot 1: The Presentation Title (0:00–0:20)
-* **Action:** Open `assets/cover_page_banner_tech.png` in image viewer or full screen.
+* **Action:** Open `assets/cover_page_banner_professional.png` in image viewer or full screen.
 
 ## Shot 2: Problem Statement (0:20–0:45)
 * **Action:** Open `README.md` in VS Code or web browser, highlight Section 1: Problem Statement, and scroll slowly.
@@ -41,4 +41,4 @@ This document lists the exact sequence of screen actions and code files to recor
 * **Action:** Open `README.md` Section 12: Local Setup showing the Github repository instructions and the `.gitignore` secrets warnings.
 
 ## Shot 13: Closing (4:45–5:00)
-* **Action:** Display `assets/cover_page_banner_tech.png` in full screen.
+* **Action:** Display `assets/cover_page_banner_professional.png` in full screen.
