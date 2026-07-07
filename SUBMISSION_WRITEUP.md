@@ -4,6 +4,9 @@
 ## Track
 🌍 **Agents for Good** — Health, Accessibility, and Social Good
 
+## Video Presentation
+🎥 **Watch the 5-Minute Pitch & Walkthrough:** [https://www.youtube.com/watch?v=bnqqANoSfsc](https://www.youtube.com/watch?v=bnqqANoSfsc)
+
 ---
 
 ## 1. Problem Statement
@@ -138,3 +141,8 @@ Future versions may add encrypted user profiles, persistent favorites, cross-dev
 1. **Live API Integration:** Connecting MCP tools to live municipal APIs (e.g. NOAA, EPA, local Health Department registries).
 2. **Offline Local LLMs:** Integrating lightweight local model runners (e.g. Gemma 2b) to enhance privacy.
 3. **Cross-device Persistence:** Encrypted databases to enable secure cross-device histories with user consent.
+
+---
+
+## 14. Video Presentation
+🎥 **Watch the 5-Minute Pitch & Walkthrough:** [https://www.youtube.com/watch?v=bnqqANoSfsc](https://www.youtube.com/watch?v=bnqqANoSfsc)

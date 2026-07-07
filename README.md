@@ -3,6 +3,9 @@
 
 **Track:** Agents for Good (Health, Safety, and Civic Readiness)
 
+## Video Presentation
+🎥 **Watch the 5-Minute Pitch & Walkthrough:** [https://www.youtube.com/watch?v=bnqqANoSfsc](https://www.youtube.com/watch?v=bnqqANoSfsc)
+
 ---
 
 ## Cover Banner
@@ -28,6 +31,7 @@
 14. [Running Tests](#14-running-tests)
 15. [Deployability](#15-deployability)
 16. [Project Limitations & Future Scope](#16-project-limitations--future-scope)
+17. [Video Presentation](#17-video-presentation)
 
 ---
 
@@ -245,4 +249,9 @@ make test
 
 ### 4. Gateway Security Block Alert
 ![Security Block Alert](./assets/screenshots/security_block_alert.png)
+
+---
+
+## 17. Video Presentation
+🎥 **Watch the 5-Minute Pitch & Walkthrough:** [https://www.youtube.com/watch?v=bnqqANoSfsc](https://www.youtube.com/watch?v=bnqqANoSfsc)
 
