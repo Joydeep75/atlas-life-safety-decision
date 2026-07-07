@@ -18,7 +18,7 @@ This plan guides you through the process of recording the 5-minute presentation 
 ## 2. Timing & Shot Roadmap (Under 5 Minutes)
 
 ### 0:00–0:20 | Scene 1: Introduction & Title
-- **Visual:** Display `assets/cover_page_banner_professional.png` in full-screen mode.
+- **Visual:** Display `assets/cover_page_banner.png` in full-screen mode.
 - **Action:** Introduce ATLAS, its mission focus on health/safety for the *Agents for Good* track, and outline the goal of proactive safety scans.
 
 ### 0:20–0:45 | Scene 2: Problem Statement & Why Agents
@@ -54,5 +54,5 @@ This plan guides you through the process of recording the 5-minute presentation 
 - **Action:** State that the app runs completely locally from GitHub with zero cloud dependencies, making it 100% reproducible for judges.
 
 ### 4:45–5:00 | Future Roadmap & Closing
-- **Visual:** Display `assets/cover_page_banner_professional.png` in full-screen mode.
+- **Visual:** Display `assets/cover_page_banner.png` in full-screen mode.
 - **Action:** Highlight future scope items (personalized consent-based commute routes, mobile/iPad clients, and live APIs) and close the presentation.

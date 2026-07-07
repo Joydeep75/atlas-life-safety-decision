@@ -3,7 +3,7 @@ ATLAS Spoken Video Script (Target: 5 Minutes)
 
 [0:00 - 0:20] Hook
 -----------------
-*Screen Action:* Show cover_page_banner_professional.png in full screen.
+*Screen Action:* Show cover_page_banner.png in full screen.
 *Voiceover:* "Every day, millions of people make plans that impact their health and safety—whether it's traveling to a new city or grabbing dinner. But traditional tools require you to manually check municipal alerts. ATLAS changes that. It's a proactive Life-Safety Decision Agent that scans, checks, and scores your everyday plans automatically."
 
 [0:20 - 0:45] Problem
@@ -48,5 +48,5 @@ ATLAS Spoken Video Script (Target: 5 Minutes)
 
 [4:45 - 5:00] Future Scope & Close
 ----------------------------------
-*Screen Action:* Show cover_page_banner_professional.png in full screen.
+*Screen Action:* Show cover_page_banner.png in full screen.
 *Voiceover:* "In the future, we will connect ATLAS to live NOAA and municipal health APIs and deploy lightweight local models to enhance data privacy. ATLAS is a showcase of how intelligent, secured agents can work for social good. Thank you."

@@ -7,7 +7,7 @@
 
 ## Cover Banner
 
-![ATLAS Cover Page Banner](assets/cover_page_banner_professional.png)
+![ATLAS Cover Page Banner](assets/cover_page_banner.png)
 
 ---
 
