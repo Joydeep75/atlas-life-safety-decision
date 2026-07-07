@@ -42,23 +42,14 @@ Visual architecture diagrams are available inside the [assets/](file:///Users/jo
 
 ## 5. Key Course Concepts Applied
 
-### ADK Multi-Agent Workflow
-ATLAS implements a 5-agent architecture in `app/agent.py` using the ADK 2.0 Workflows graph API, resolving conditional branches with dictionaries (preventing duplicate edges) and using `AgentTool` for dynamic sub-agent delegation.
-
-### MCP Server
-An stdio-based MCP server is built using the Python `mcp` SDK to expose safety rules, weather parameters, and dining hygiene context tools.
-
-### Antigravity
-The agent runs entirely locally using the Antigravity SDK (`InMemoryRunner` and `App` constructors), making testing and review seamless without complex cloud setups.
-
-### Security Features
-Includes a dedicated security gate checking system prompt overrides, filtering unsafe road suggestions, redacting SSN/phone patterns, and outputting structured JSON logs.
-
-### Deployability
-Standardized via a `Dockerfile` for Cloud Run and a local `Makefile` with targets (`playground`, `ui`, `test`, `install`) for fast local setup.
-
-### Agent Skills
-Leverages standardized ADK templates and development workflows to maintain clean division of concerns.
+| Key Course Concept | Applied Location | Implementation Highlights |
+| :--- | :--- | :--- |
+| **Agent / Multi-Agent System (ADK)** | [app/agent.py](./app/agent.py) | Designed a 5-node Directed Acyclic Graph (DAG) using ADK 2.0 Workflows with conditional routing and sub-agent delegation. |
+| **MCP Server** | [app/mcp_server.py](./app/mcp_server.py) | Engineered local FastMCP tools (`atlas_weather_context`, `atlas_aqi_context`, etc.) isolating local telemetry context. |
+| **Antigravity SDK** | [app/agent.py](./app/agent.py) | Initialized workflow using Google Antigravity SDK wrapper `App` structures supporting in-memory graph execution. |
+| **Security Features** | [app/agent.py (Safety Policy)](./app/agent.py#L158-L286) | Integrated a safety gateway policy node handling PII scrubbing, prompt injection defense, and unsafe plan blocks. |
+| **Deployability** | [Dockerfile](./Dockerfile) / [deployment/](./deployment) | Included a production Docker container structure and Terraform Cloud Run templates for zero-friction cloud deployment. |
+| **Agent Skills** | `docs/` & [README.md](./README.md) | Documented setup guides, playground execution, and interactive CLI prompts for judging reproducibility. |
 
 ---
 

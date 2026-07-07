@@ -97,12 +97,14 @@ Safety validation is not a simple classifier task; it requires dynamic context g
 
 ## 7. Course Key Concepts Mapping
 
-* **ADK Multi-Agent System:** Built using the official ADK 2.0 Workflows graph API in [app/agent.py](file:///Users/joydeepg/Education/Kaggle-Google/15-19-June-2026/Capstone_Project/adk-workspace/atlas-life-safety-decision/app/agent.py) with 5 nodes, conditional routing, and `AgentTool` delegation.
-* **MCP Server:** Implemented in [app/mcp_server.py](file:///Users/joydeepg/Education/Kaggle-Google/15-19-June-2026/Capstone_Project/adk-workspace/atlas-life-safety-decision/app/mcp_server.py) using the Python `mcp` SDK to expose five local database context tools.
-* **Antigravity:** Configured using the Antigravity SDK (`InMemoryRunner` and `App` constructors) for offline and local testing.
-* **Security Features:** Hardened gateway checking prompt overrides, SSN/email formats, and unsafe road instructions.
-* **Deployability:** Includes standard `pyproject.toml` dependency mapping, a `Dockerfile` for Cloud Run, and a `Makefile` containing run targets.
-* **Agent Skills:** Reuses ADK workflow and code templates to ensure correct graph serialization.
+| Key Course Concept | Applied Location | Implementation Highlights |
+| :--- | :--- | :--- |
+| **Agent / Multi-Agent System (ADK)** | [app/agent.py](./app/agent.py) | Designed a 5-node Directed Acyclic Graph (DAG) using ADK 2.0 Workflows with conditional routing and sub-agent delegation. |
+| **MCP Server** | [app/mcp_server.py](./app/mcp_server.py) | Engineered local FastMCP tools (`atlas_weather_context`, `atlas_aqi_context`, etc.) isolating local telemetry context. |
+| **Antigravity SDK** | [app/agent.py](./app/agent.py) | Initialized workflow using Google Antigravity SDK wrapper `App` structures supporting in-memory graph execution. |
+| **Security Features** | [app/agent.py (Safety Policy)](./app/agent.py#L158-L286) | Integrated a safety gateway policy node handling PII scrubbing, prompt injection defense, and unsafe plan blocks. |
+| **Deployability** | [Dockerfile](./Dockerfile) / [deployment/](./deployment) | Included a production Docker container structure and Terraform Cloud Run templates for zero-friction cloud deployment. |
+| **Agent Skills** | `docs/` & [README.md](./README.md) | Documented setup guides, playground execution, and interactive CLI prompts for judging reproducibility. |
 
 ---
 
