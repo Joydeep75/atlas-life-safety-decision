@@ -1,3 +1,0 @@
-A premium UI mockup of the 'ATLAS: Life-Safety Decision Agent' dashboard application.
-The screen shows a modern dark-themed web interface with a sidebar showing session-only 'History' and 'Favorites'. In the center, a plan assessment form displays a text prompt: 'I want Mediterranean food tonight near the city center'. Below, a giant circular gauge displays an 'Explainable Decision Score' of 92, labeled 'Excellent Idea', surrounded by metric panels for Weather, Air Quality, and Safety rules.
-Style: Premium dashboard design, modern web UI mockup. Clean dark slate background, glassmorphism card layouts, glowing cyan and green highlights. Calm professional look, crisp white typography, high-fidelity UI design.

@@ -227,4 +227,32 @@ mcp-config.json
 # Local Deployment State Metadata
 deployment_metadata.json
 
+# Local-Only Developer logs
+PROJECT_STATE.md
+streamlit_app_backup.py
+GEMINI.md
+
+# Local-Only Video Scripts and YouTube Prep Documents
+DEMO_SCRIPT.txt
+docs/video_chapter_timestamps.md
+docs/youtube_description.md
+docs/youtube_title_options.md
+docs/final_video_recording_plan.md
+docs/video_storyboard.md
+docs/video_shot_list.md
+docs/video_voiceover.md
+docs/demo_checklist.md
+docs/screenshot_checklist.md
+
+# Local-Only Visual Asset Drafts & Prompts
+assets/cover_page_banner_OLD.png
+assets/cover_page_banner_minimal.png
+assets/cover_page_banner_tech.png
+assets/architecture_diagram.png
+assets/video_architecture_slide.md
+assets/cover_image_prompt.txt
+assets/ui_mockup_prompt.txt
+assets/video_thumbnail_prompt.txt
+assets/architecture_slide_prompt.txt
+
 

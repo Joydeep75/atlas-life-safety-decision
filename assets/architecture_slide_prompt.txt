@@ -1,3 +1,0 @@
-A professional architecture infographic slide for 'ATLAS: Life-Safety Decision Agent'.
-The slide displays a clean, horizontal flowchart detailing: User Input -> Safety Policy Agent (with sub-labels 'Safety Guardrails' and 'PII Scrubbing') -> Commander Agent -> Multi-Agent Decisions (routing to Destination and Food agents) -> Model Context Protocol (MCP Tools) -> Decision Scoring Agent (with 'Explainable Decision Score').
-Style: Clean vector blueprint style, minimalist dark gray background. Glowing lines in cyan and green connect the blocks. Crisp, highly readable labels in white sans-serif. Highly structured, corporate technical presentation aesthetic, 16:9 aspect ratio.
