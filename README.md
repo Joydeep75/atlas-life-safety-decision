@@ -4,7 +4,7 @@
 **Track:** Agents for Good (Health, Safety, and Civic Readiness)
 
 ## Video Presentation
-🎥 **Watch the 5-Minute Pitch & Walkthrough:** [https://www.youtube.com/watch?v=bnqqANoSfsc](https://www.youtube.com/watch?v=bnqqANoSfsc)
+🎥 **Watch the Pitch & Walkthrough:** [https://www.youtube.com/watch?v=bnqqANoSfsc](https://www.youtube.com/watch?v=bnqqANoSfsc)
 
 ---
 
@@ -255,5 +255,5 @@ make test
 ---
 
 ## 17. Video Presentation
-🎥 **Watch the 5-Minute Pitch & Walkthrough:** [https://www.youtube.com/watch?v=bnqqANoSfsc](https://www.youtube.com/watch?v=bnqqANoSfsc)
+🎥 **Watch the Pitch & Walkthrough:** [https://www.youtube.com/watch?v=bnqqANoSfsc](https://www.youtube.com/watch?v=bnqqANoSfsc)
 

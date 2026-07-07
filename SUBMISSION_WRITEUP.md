@@ -5,7 +5,7 @@
 🌍 **Agents for Good** — Health, Accessibility, and Social Good
 
 ## Video Presentation
-🎥 **Watch the 5-Minute Pitch & Walkthrough:** [https://www.youtube.com/watch?v=bnqqANoSfsc](https://www.youtube.com/watch?v=bnqqANoSfsc)
+🎥 **Watch the Pitch & Walkthrough:** [https://www.youtube.com/watch?v=bnqqANoSfsc](https://www.youtube.com/watch?v=bnqqANoSfsc)
 
 ---
 
@@ -136,4 +136,4 @@ Future versions may add encrypted user profiles, persistent favorites, cross-dev
 ---
 
 ## 14. Video Presentation
-🎥 **Watch the 5-Minute Pitch & Walkthrough:** [https://www.youtube.com/watch?v=bnqqANoSfsc](https://www.youtube.com/watch?v=bnqqANoSfsc)
+🎥 **Watch the Pitch & Walkthrough:** [https://www.youtube.com/watch?v=bnqqANoSfsc](https://www.youtube.com/watch?v=bnqqANoSfsc)
