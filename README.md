@@ -207,9 +207,10 @@ make test
 
 ---
 
-## 15. Deployability
+## 15. Production Cloud Deployment
 * **Cloud Run Setup:** Built-in `Dockerfile` allows instant deployment.
-* **API Endpoints:** `fast_api_app.py` exposes standard REST endpoints for integrations.
+* **Infrastructure-as-Code:** Enterprise-grade Terraform templates are provided under the [deployment/](./deployment) directory to deploy the FastAPI server wrapper on Google Cloud Run. For detailed deployment steps, see the [Deployment Guide](./docs/deployment_guide.md).
+* **API Endpoints:** `fast_api_app.py` exposes standard REST and SSE streaming endpoints ready for cloud integrations.
 
 ---
 

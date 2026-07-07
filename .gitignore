@@ -224,4 +224,7 @@ mcp_config.json
 mcp-config.json
 .mcp/
 
+# Local Deployment State Metadata
+deployment_metadata.json
+
 
